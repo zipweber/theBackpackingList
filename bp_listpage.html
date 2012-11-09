@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<script type="text/javascript" language="javascript" src="scripts/backpackingScript.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/backpackingStyle.css" />
+	</head>
+	<body>
+		<div id="tableContents">
+		<div style="10px 0 0 10px">
+			<H1>Gear Lists</H1>
+		</div>
+			<form name="backpackingList" method="post" action="packedweight.php">
+					<div style="margin:5px 0 5px 12px">
+						<label>List Name: </label><input type="text" size="30"/>
+					</div>
+						<table id="itemTable">
+								<tr>
+									<th id="col6Header">remove</th>
+									<th id="col1Header">Item #</th>
+									<th id="col2Header">Item</th>
+									<th id="col3Header">Item Type</th>
+									<th id="col4Header">Weight</th>
+									<th id="col5Header">Selected</th>
+									
+								</tr>
+							
+								<tr><td class="cbCentered"><input name="chk" type="checkbox"></td>
+									<td><label name="item1Number[]" size="48">1</label></td>
+									<td><input name="item1Name[]" type="text" size="48"/></td>
+									<td><input name="gear1Type[]" type="text" size="10"/></td>
+									<td><input name="item1Weight[]" type="text" value="1" size="7"/>
+									<td class="cbCentered"><input name="chk2" type="checkbox" onclick="add()" value="1">
+									</tr>
+								<tr><td class="cbCentered"><input name="chk" type="checkbox"></td>
+									<td><label name="item2Number[]">2</label></td>
+									<td><input name="item2Name[]" type="text" size="48"/></td>
+									<td><input name="gear2Type[]" type="text" size="10"/></td>
+									<td><input name="item2Weight[]" type="text" value="2" size="7"/>
+									<td class="cbCentered"><input name="chk2" type="checkbox" onclick="add()"value="2">
+									</tr>
+								<tr><td class="cbCentered"><input name="chk" type="checkbox" ></td>
+									<td><label name="item3Number[]">3</label></td>
+									<td><input name="item3Name[]" type="text" size="48"/></td>
+									<td><input name="gear3Type[]" type="text" size="10"/></td>
+									<td><input name="item3Weight[]" type="text" value="3" size="7"/>
+									<td class="cbCentered"><input name="chk2" type="checkbox" onclick="add()"value="3">
+									</tr>
+								<tr><td class="cbCentered"><input name="chk" type="checkbox"></td>
+									<td><label name="item4Number[]">4</label></td>
+									<td><input name="item4Name[]" type="text" size="48"/></td>
+									<td><input name="gear4Type[]" type="text" size="10"/></td>
+									<td><input name="item4Weight[]" type="text" value="4" size="7"/>
+									<td class="cbCentered"><input name="chk2" type="checkbox" onclick="add()"value="4">
+									</tr>
+								<tr><td class="cbCentered"><input name="chk" type="checkbox"></td>
+									<td><label name="item5Number[]">5</label></td>
+									<td><input name="item5Name[]" type="text" size="48"/></td>
+									<td><input name="gear5Type[]" type="text" size="10"/></td>
+									<td><input name="item5Weight[]" type="text" value="5" size="7"/>
+									<td class="cbCentered"><input name="chk2" type="checkbox" onclick="add()"value="5">
+									</tr>
+								<tr><td class="cbCentered"><input name="chk" type="checkbox"></td>
+									<td><label name="item6Number[]">6</label></td>
+									<td><input name="item6Name[]" type="text" size="48"/></td>
+									<td><input name="gear6Type[]" type="text" size="10"/></td>
+									<td><input name="item6Weight[]" type="text" value="6" size="7"/>
+									<td class="cbCentered"><input name="chk2" type="checkbox" onclick="add()"value="6">
+									</tr>
+								
+						</table>
+						<div style="margin:8px 0 8px 11px">
+								<input type="button" value="Add New Item" onclick="addRow('itemTable')"/>
+								<input type="button" value="Remove Item" onclick="deleteRow('itemTable')"/>
+						</div>
+						<div style="text-align:center;margin-left:140px">
+							<label>Total Weight:  </label><input id="totalWeight" name="totalWeight[]" type="text"/>
+						</div>
+						<div id="formSave" style="text-align:center;margin:60px 90px 0 0">
+							<input type="submit" value="Save List"/>
+						</div>
+					</div>
+				</form>
+			
+		</div>
+		
+	</body>
+</html>
